@@ -1,53 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <head>
-        <title>My First Website</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <nav><button id="theme-btn">🌙 Dark Mode</button></nav>
+    <title>Abdul Khaliq Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
-    <section class="contact">
-    <h2>Hire Me</h2>
 
-    <form action="https://formsubmit.co/abdulkhaliq217@gmail.com" method="POST">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
 
-        <input type="text" name="name" placeholder="Your Name" required>
+        <button id="theme-btn">🌙 Dark Mode</button>
+    </nav>
 
-        <input type="email" name="email" placeholder="Your Email" required>
+    <section class="hero" id="home">
+        <h1>Abdul Khaliq</h1>
+        <p>Future Web Developer</p>
+        <p>I build modern and responsive websites.</p>
 
-        <textarea name="message" placeholder="Write your message" required></textarea>
-
-        <button type="submit">Send Message</button>
-
-    </form>
-</section>
-    <button id="hire-btn" onclick="showMessage()">Hire Me</button>
-    <script>
-        function showMessage() {
-            alert("Assalamu Alaikum Everyone! 😊 Thanks for visiting my website.");
-        }
-    </script>
-
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
-
-    <h2>My Goal</h2>
-    <p>I want to become a professional Web Developer.</p>
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>📧 Email: Coming Soon</p>
-<p>📞 Phone: Available on Request</p>
-        <p>📍 Spain</p>
+        <button id="hire-btn" onclick="showMessage()">Hire Me</button>
+        <button>My Projects</button>
     </section>
+
+    <div class="card" id="about">
+        <h2>About Me</h2>
+        <p>My name is Abdul Khaliq.</p>
+        <p>I live in Spain and I am learning Web Development.</p>
+        <p>Age: 18</p>
+        <p>Hobby: Web Development</p>
+    </div>
+
+    <section class="skills">
+        <h2>My Skills</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h2>My Goal</h2>
+        <p>I want to become a professional Web Developer.</p>
+    </section>
+
     <section class="services">
         <h2>My Services</h2>
 
@@ -61,46 +62,71 @@
             <p>Beautiful and user-friendly designs.</p>
         </div>
 
-        <button>Contact Me</button>
+        <button onclick="showMessage()">Contact Me</button>
     </section>
+
+    <section class="projects" id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-card">
+            <h3>🌐 Personal Portfolio</h3>
+            <p>A modern portfolio website built with HTML, CSS and JavaScript.</p>
+
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>🛍️ Clothing Store</h3>
+            <p>Coming Soon...</p>
+
+            <button>View Project</button>
+        </div>
+
+        <div class="project-card">
+            <h3>🏨 Hotel Website</h3>
+            <p>Coming Soon...</p>
+
+            <button>View Project</button>
+        </div>
+
+    </section>
+    <section class="contact" id="contact">
+        <h2>Hire Me</h2>
+
+        <form action="https://formsubmit.co/abdulkhaliq217@gmail.com" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" placeholder="Write your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <p>📧 Email: Coming Soon</p>
+        <p>📞 Phone: Available on Request</p>
+        <p>📍 Spain</p>
+    </section>
+
     <footer>
         <p>© 2026 Abdul Khaliq. All Rights Reserved.</p>
     </footer>
-    <h1>Abdul Khaliq</h1>
-    <p>Learning Web Development Every Day</p>
-    <button onclick="showMessage()">Contact Me</button>
-    </section>
+
     <script>
+        function showMessage() {
+            alert("Assalamu Alaikum Everyone! 😊 Thanks for visiting my website.");
+        }
 
+        const btn = document.getElementById("theme-btn");
+
+        btn.addEventListener("click", function () {
+            document.body.classList.toggle("dark-mode");
+        });
     </script>
-    <h1>👋 Assalamu Alaikum, Soy Abdul Khaliq</h1 alt="My Image">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>My name is Abdul Khaliq.</p>
-        <p>I live in Spain and I am learning Web Development.</p>
-        <p>Age: 18</p>
-        <p>Hobby: Web Development</p>
-    </div>
-    <h2>About Me</h2>
-    <p>Main web developer banna chahta hoon.</p>
-
-    <a href="https://google.com">Google</a>
-    <button onclick="showMessage()">Click Me</button>
 
 </body>
-<img src="https://picsum.photos/600/400" alt="My Image">
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav>
 
 </html>
-<script>
-    const btn = document.getElementById("theme-btn");
-
-    btn.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-    });
-</script>
